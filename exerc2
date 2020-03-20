@@ -1,0 +1,85 @@
+<!-- (exerc2) A fim de representar empregados em uma empresa, crie uma classe chamada Empregado que inclui as três informações 
+a seguir como atributos:
+• um primeiro nome,
+• um sobrenome, e
+• um salário mensal. 
+
+Sua classe deve ter um construtor (veja sobre este método especial na apostila pág. 6, e nos vídeos [1] e [2]) que
+inicializa os três atributos. Forneça um método set e get para cada atributo. 
+Se o salário mensal não for positivo, configure-o como 0.0. 
+Escreva um código de teste que demonstra as capacidades da classe. 
+Crie duas instâncias da classe e exiba o salário anual de cada instância. 
+Então dê a cada empregado um aumento de 10% e exiba novamente o salário anual de cada empregado. -->
+
+<?php
+
+class Empregado{
+  public $primeironome;
+  public $sobrenome;
+  public $salariomensal;
+  public $salarioanual;
+  
+public function __construct($primeironome, $sobrenome, $salariomensal){
+  $this->primeironome=$primeironome;
+  $this->sobrenome=$sobrenome;
+  $this->salariomensal=$salariomensal;
+}
+
+public function setPrimeironome($primeironome){
+    $this->primeironome=$primeironome;
+  }
+  
+public function setSobrenome($sobrenome){
+    $this->sobrenome=$sobrenome;
+  }
+
+public function setSalariomensal($salariomensal){
+    $this->salariomensal=$salariomensal;
+  }
+  
+public function setSalarioanual(){
+    return $this->salarioanual = $this->salariomensal*12;
+}
+
+public function getPrimeironome(){
+  return $this->primeironome;
+  }
+
+public function getSobrenome(){
+  return $this->sobrenome;
+  }
+  
+public function getSalariomensal(){
+  return $this->salariomensal;
+  }
+
+  
+public function getSalarioanual(){
+  return $this->salarioanual;
+  }
+ 
+ public function validaSalariomensal(){
+    if($this->salariomensal < 0){
+      $this->salariomensal = 0.0;
+    }
+  }
+  
+  public function aumento(){
+  $dezporc = $this->salariomensal*0.10;
+  $this->salariomensal = $this->salariomensal + $dezporc;
+	}
+  
+}
+
+$e1 = new Empregado("Luiza", "Martins", 2000,00);
+$e2 = new Empregado("Lucas", "de Paula", 1800,00);
+echo "\n O salário anual de {$e1->getprimeironome()} {$e1->getsobrenome()} equivale a {$e1->getsalarioanual()}";
+echo "\n O salário anual de {$e2->getprimeironome()} {$e2->getsobrenome()} equivale a {$e2->getsalarioanual()}";
+
+$e1 -> aumento();
+$e1->setsalarioanual();
+$e2 -> aumento();
+$e2->setsalarioanual();
+echo "\n O salário anual de {$e1->getprimeironome()} {$e1->getsobrenome()} após um aumento de 10% equivale a {$e1->getsalarioanual()}";
+echo "\n O salário anual de {$e2->getprimeironome()} {$e2->getsobrenome()} após um aumento de 10% equivale a {$e2->getsalarioanual()}";
+?>
