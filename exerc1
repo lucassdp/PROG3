@@ -1,0 +1,19 @@
+<!-- (exerc1) Descreva em no máximo 200 palavras o que é um automóvel
+e o que ele faz. Liste os substantivos e verbos separadamente.
+Cada substantivo corresponde a um objeto que precisará ser
+construído para implementar um sistema, nesse caso, um carro.
+Selecione 5 dos objetos que você listou e, para cada um, liste
+vários atributos e comportamentos. Descreva brevemente como
+esses objetos interagem entre si e com outros objetos na sua
+descrição. Estes passos que você seguiu são típicos do projeto
+orientado a objetos. -->
+
+Automóvel é um meio de transporte com rodas tanto de pessoas como de cargas, 
+que se move através da força de um motor e precisa ser conduzido por um condutor. 
+Para se locomover, necessita de alguns recursos, como volante, freio, acelerador, bancos, rodas e espelhos.
+
+Volante: recurso básico para que o condutor possa dar direção ao automóvel.
+Freio: pode ser acionado com o pé ou com a mão, é usado para parar o veículo.
+Acelerador: é o recurso que dá a impulsão para que o automóvel possa se locomover em uma pista.
+Bancos: necessário para que o condutor e os ocupantes do veículo possam ficar acomodados no interior desse.
+Espelhos: são usados para dar uma melhor visão ao condutor de todos os lados possíveis do automóvel.
